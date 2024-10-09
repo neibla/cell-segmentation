@@ -3,8 +3,8 @@ import concurrent.futures
 import os
 import logging
 import torch
-from models.cellpose_model import predict_masks, get_cellpose_model
-from utils.image_utils import load_image, save_image
+from cell_segmentor.models.cellpose_model import predict_masks, get_cellpose_model
+from cell_segmentor.utils.image_utils import load_image, save_image
 
 
 class CellSegmentationProcessor:
@@ -38,6 +38,7 @@ class CellSegmentationProcessor:
 
     def process_image(self, image_path: str, output_dir: str) -> None:
         image_np = load_image(image_path)
+        self.logger.info(f"Processing image {image_path}")
         masks_pred, _, _ = predict_masks(self.model, [image_np])
         self.save_detected_cells(masks_pred[0], image_np, output_dir)
 
