@@ -24,11 +24,16 @@ uv python install python==3.12
 uv sync
 ```
 
-## CLI Usage
-
+## CLI Tool
+# CLI Installation
 ```bash
-uv run cell-segmentor -d tests/data --output  test_output
-uv run cell-segmentor --input-images ./tests/data/L11_s1_w2_slice_0.png --output test_output
+uv tool install git+https://github.com/neibla/cell-segmentation
+```
+
+# CLI Usage
+```bash
+cell-segmentor -d tests/data --output  test_output
+cell-segmentor --input-images ./tests/data/L11_s1_w2_slice_0.png --output test_output
 ```
 
 ## Setting up AWS batch 
