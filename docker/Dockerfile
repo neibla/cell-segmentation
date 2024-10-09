@@ -23,6 +23,7 @@ WORKDIR /app
 # Copy the project files
 COPY pyproject.toml uv.lock ./
 COPY src ./src
+COPY README.md ./README.md
 
 # Install project dependencies using uv (only main dependencies)
 RUN uv sync --no-dev --frozen
@@ -34,5 +35,4 @@ RUN mkdir -p /root/.cellpose/models && \
 # Set the entrypoint to python
 ENTRYPOINT ["uv", "run"]
 
-# Set the default command to main.py in the src directory (can be overridden)
-CMD ["src.main.py"]
+CMD ["src/cell_segmentor_cli/main.py"]

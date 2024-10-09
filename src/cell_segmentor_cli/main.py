@@ -1,7 +1,6 @@
 import logging
 import argparse
-import sys
-from cell_segmentor import get_segmented_cells
+from cell_segmentor import segment_cells, segment_cells_from_directory
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -11,35 +10,36 @@ logger = logging.getLogger(__name__)
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Cell Segmentation CLI")
-    parser.add_argument(
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument(
         "-i",
         "--input-images",
         nargs="+",
-        required=True,
-        help="Input image files",
+        help="Input image files to apply cell segmentation to",
+    )
+    group.add_argument(
+        "-d",
+        "--input-directory",
+        help="Directory containing image files to apply cell segmentation to",
     )
     parser.add_argument(
         "-o",
-        "--output-dirs",
-        nargs="+",
+        "--output",
         required=True,
-        help="Output directories",
+        help="Output directory for cell segmentation results",
     )
     return parser.parse_args()
 
 
 def main():
     args = parse_arguments()
-    print(args.input_images)
-    print(args.output_dirs)
-    if len(args.input_images) != len(args.output_dirs):
-        logger.error(
-            "The number of input images must match the number of output directories."
-        )
-        sys.exit(1)
 
-    logger.info(f"Processing {len(args.input_images)} image(s)")
-    get_segmented_cells(args.input_images, args.output_dirs)
+    if args.input_images:
+        logger.info(f"Processing {len(args.input_images)}")
+        segment_cells(args.input_images, args.output)
+    elif args.input_directory:
+        logger.info(f"Processing {args.input_directory}")
+        segment_cells_from_directory(args.input_directory, args.output)
     logger.info("Processing complete")
 
 

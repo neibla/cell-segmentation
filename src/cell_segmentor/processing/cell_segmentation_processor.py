@@ -4,7 +4,7 @@ import os
 import logging
 import torch
 from cell_segmentor.models.cellpose_model import predict_masks, get_cellpose_model
-from cell_segmentor.utils.image_utils import load_image, save_image
+from cell_segmentor.utils.image_utils import load_image, save_image, save_mask
 
 
 class CellSegmentationProcessor:
@@ -32,19 +32,25 @@ class CellSegmentationProcessor:
         self.logger.info(f"Loaded Cellpose model {model_type}")
         self.num_workers = num_workers
 
-    def process_images(self, image_paths: list[str], output_dirs: list[str]) -> None:
-        for path, output in zip(image_paths, output_dirs):
-            self.process_image(path, output)
+    def process_images(self, image_paths: list[str], output_dir: str) -> None:
+        for path in image_paths:
+            file_name = os.path.splitext(os.path.basename(path))[0]
+            output_path = os.path.join(output_dir, file_name)
+            self.process_image(path, output_path)
 
     def process_image(self, image_path: str, output_dir: str) -> None:
         image_np = load_image(image_path)
         self.logger.info(f"Processing image {image_path}")
         masks_pred, _, _ = predict_masks(self.model, [image_np])
-        self.save_detected_cells(masks_pred[0], image_np, output_dir)
+        # using the latest mask
+        self.save_detected_cells(masks_pred[-1], image_np, output_dir)
 
     def save_detected_cells(
         self, masks_pred: np.ndarray, image_np: np.ndarray, output_dir: str
     ) -> None:
+        # save the mask
+        save_mask(masks_pred, f"{output_dir}/mask.npy")
+        cells_output_dir = os.path.join(output_dir, "cells")
         unique_cells = np.unique(masks_pred)[1:]
 
         with concurrent.futures.ThreadPoolExecutor(
@@ -52,7 +58,7 @@ class CellSegmentationProcessor:
         ) as executor:
             futures = [
                 executor.submit(
-                    self.process_cell, cell_id, masks_pred, image_np, output_dir
+                    self.process_cell, cell_id, masks_pred, image_np, cells_output_dir
                 )
                 for cell_id in unique_cells
             ]
