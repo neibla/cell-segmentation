@@ -1,8 +1,8 @@
 version = 1
 requires-python = ">=3.12"
 resolution-markers = [
-    "platform_machine == 'arm64' and platform_system == 'Darwin' and python_full_version >= '3.12'",
-    "platform_machine == 'aarch64' and platform_system == 'Linux' and python_full_version >= '3.12'",
+    "platform_machine == 'arm64' and platform_system == 'Darwin'",
+    "platform_machine == 'aarch64' and platform_system == 'Linux'",
     "(platform_machine != 'aarch64' and platform_machine != 'arm64') or (platform_machine == 'aarch64' and platform_system != 'Linux') or (platform_machine == 'arm64' and platform_system != 'Darwin')",
 ]
 
@@ -11,8 +11,8 @@ name = "anyio"
 version = "4.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "idna", marker = "python_full_version >= '3.12'" },
-    { name = "sniffio", marker = "python_full_version >= '3.12'" },
+    { name = "idna", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "sniffio", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/78/49/f3f17ec11c4a91fe79275c426658e509b07547f874b14c1a526d86a83fc8/anyio-4.6.0.tar.gz", hash = "sha256:137b4559cbb034c477165047febb6ff83f390fc3b20bf181c1fc0a728cb8beeb", size = 170983 }
 wheels = [
@@ -33,7 +33,7 @@ name = "argon2-cffi"
 version = "23.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "argon2-cffi-bindings", marker = "python_full_version >= '3.12'" },
+    { name = "argon2-cffi-bindings", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/31/fa/57ec2c6d16ecd2ba0cf15f3c7d1c3c2e7b5fcb83555ff56d7ab10888ec8f/argon2_cffi-23.1.0.tar.gz", hash = "sha256:879c3e79a2729ce768ebb7d36d4609e3a78a4ca2ec3a9f12286ca057e3d0db08", size = 42798 }
 wheels = [
@@ -45,7 +45,7 @@ name = "argon2-cffi-bindings"
 version = "21.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi", marker = "python_full_version >= '3.12'" },
+    { name = "cffi", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f1356347f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz", hash = "sha256:bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3", size = 1779911 }
 wheels = [
@@ -66,8 +66,8 @@ name = "arrow"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "python-dateutil", marker = "python_full_version >= '3.12'" },
-    { name = "types-python-dateutil", marker = "python_full_version >= '3.12'" },
+    { name = "python-dateutil", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "types-python-dateutil", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/2e/00/0f6e8fcdb23ea632c866620cc872729ff43ed91d284c866b515c6342b173/arrow-1.3.0.tar.gz", hash = "sha256:d4540617648cb5f895730f1ad8c82a65f2dad0166f57b75f3ca54759c4d67a85", size = 131960 }
 wheels = [
@@ -79,7 +79,7 @@ name = "asttokens"
 version = "2.4.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "six", marker = "python_full_version >= '3.12'" },
+    { name = "six", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/45/1d/f03bcb60c4a3212e15f99a56085d93093a497718adf828d050b9d675da81/asttokens-2.4.1.tar.gz", hash = "sha256:b03869718ba9a6eb027e134bfdf69f38a236d681c83c160d510768af11254ba0", size = 62284 }
 wheels = [
@@ -118,7 +118,7 @@ name = "beautifulsoup4"
 version = "4.12.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "soupsieve", marker = "python_full_version >= '3.12'" },
+    { name = "soupsieve", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b3/ca/824b1195773ce6166d388573fc106ce56d4a805bd7427b624e063596ec58/beautifulsoup4-4.12.3.tar.gz", hash = "sha256:74e3d1928edc070d21748185c46e3fb33490f22f52a3addee9aee0f4f7781051", size = 581181 }
 wheels = [
@@ -130,8 +130,8 @@ name = "bleach"
 version = "6.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "six", marker = "python_full_version >= '3.12'" },
-    { name = "webencodings", marker = "python_full_version >= '3.12'" },
+    { name = "six", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "webencodings", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/6d/10/77f32b088738f40d4f5be801daa5f327879eadd4562f36a2b5ab975ae571/bleach-6.1.0.tar.gz", hash = "sha256:0a31f1837963c41d46bbf1331b8778e1308ea0791db03cc4e7357b97cf42a8fe", size = 202119 }
 wheels = [
@@ -143,9 +143,9 @@ name = "boto3"
 version = "1.35.35"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "botocore", marker = "python_full_version >= '3.12'" },
-    { name = "jmespath", marker = "python_full_version >= '3.12'" },
-    { name = "s3transfer", marker = "python_full_version >= '3.12'" },
+    { name = "botocore", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jmespath", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "s3transfer", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/23/6d/a8c326b909ed8da5b147144fa820f87ffe0e3908b1a2e08e30a43960cd3d/boto3-1.35.35.tar.gz", hash = "sha256:73d4f22b57a725f0e8a6e0c4b2d16336c128e39f3189c24f9e513daa7c14936b", size = 110947 }
 wheels = [
@@ -157,9 +157,9 @@ name = "botocore"
 version = "1.35.35"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jmespath", marker = "python_full_version >= '3.12'" },
-    { name = "python-dateutil", marker = "python_full_version >= '3.12'" },
-    { name = "urllib3", marker = "python_full_version >= '3.12'" },
+    { name = "jmespath", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "python-dateutil", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "urllib3", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/40/e7/ae2e8b3fd55299a6168ec9a88252235e4f15315863815bf3e384c59626aa/botocore-1.35.35.tar.gz", hash = "sha256:899d303046391caa1d05093a673e52d02185b37bc64bd78771ad6752167a25ab", size = 12808328 }
 wheels = [
@@ -167,24 +167,24 @@ wheels = [
 ]
 
 [[package]]
-name = "cell-insights"
+name = "cell-segmentation"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "boto3", marker = "python_full_version >= '3.12'" },
-    { name = "cellpose", marker = "python_full_version >= '3.12'" },
-    { name = "opencv-python-headless", marker = "python_full_version >= '3.12'" },
-    { name = "scikit-image", marker = "python_full_version >= '3.12'" },
-    { name = "torch", marker = "python_full_version >= '3.12'" },
+    { name = "boto3", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "cellpose", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "opencv-python-headless", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "scikit-image", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "torch", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 
 [package.dev-dependencies]
 dev = [
-    { name = "ipykernel", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter", marker = "python_full_version >= '3.12'" },
-    { name = "matplotlib", marker = "python_full_version >= '3.12'" },
-    { name = "pytest", marker = "python_full_version >= '3.12'" },
-    { name = "ruff", marker = "python_full_version >= '3.12'" },
+    { name = "ipykernel", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "matplotlib", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pytest", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "ruff", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 
 [package.metadata]
@@ -210,18 +210,18 @@ name = "cellpose"
 version = "3.0.11"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "fastremap", marker = "python_full_version >= '3.12'" },
-    { name = "imagecodecs", marker = "python_full_version >= '3.12'" },
-    { name = "llvmlite", marker = "python_full_version >= '3.12'" },
-    { name = "natsort", marker = "python_full_version >= '3.12'" },
-    { name = "numba", marker = "python_full_version >= '3.12'" },
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
-    { name = "opencv-python-headless", marker = "python_full_version >= '3.12'" },
-    { name = "roifile", marker = "python_full_version >= '3.12'" },
-    { name = "scipy", marker = "python_full_version >= '3.12'" },
-    { name = "tifffile", marker = "python_full_version >= '3.12'" },
-    { name = "torch", marker = "python_full_version >= '3.12'" },
-    { name = "tqdm", marker = "python_full_version >= '3.12'" },
+    { name = "fastremap", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "imagecodecs", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "llvmlite", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "natsort", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "numba", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "opencv-python-headless", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "roifile", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "scipy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tifffile", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "torch", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tqdm", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/64/25/566e0ec2f42fa6be7ec4225ee3b71670d31471ce1381ae5bffdd318b24dc/cellpose-3.0.11.tar.gz", hash = "sha256:a8d902e7fe76fe0319871ac9426dd8d1d3d526f014d51c070918762939ce40db", size = 23299394 }
 wheels = [
@@ -242,7 +242,7 @@ name = "cffi"
 version = "1.17.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pycparser", marker = "python_full_version >= '3.12'" },
+    { name = "pycparser", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz", hash = "sha256:1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824", size = 516621 }
 wheels = [
@@ -293,7 +293,7 @@ name = "comm"
 version = "0.2.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e9/a8/fb783cb0abe2b5fded9f55e5703015cdf1c9c85b3669087c538dd15a6a86/comm-0.2.2.tar.gz", hash = "sha256:3fd7a84065306e07bea1773df6eb8282de51ba82f77c72f9c85716ab11fe980e", size = 6210 }
 wheels = [
@@ -305,7 +305,7 @@ name = "contourpy"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f5/f6/31a8f28b4a2a4fa0e01085e542f3081ab0588eff8e589d39d775172c9792/contourpy-1.3.0.tar.gz", hash = "sha256:7ffa0db17717a8ffb127efd0c95a4362d996b892c2904db72428d5b52e1938a4", size = 13464370 }
 wheels = [
@@ -402,7 +402,7 @@ name = "fastremap"
 version = "1.15.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/25/ec/86e4f8f6a0c778edd6a3db231cd45b74ac39918ee4c054abdbccbf65e37d/fastremap-1.15.0.tar.gz", hash = "sha256:d6e2268103e3620d3eef45fc5921a479d1d3778e3f80f2e30c3f5cee92d1a47f", size = 44727 }
 wheels = [
@@ -478,8 +478,8 @@ name = "httpcore"
 version = "1.0.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "certifi", marker = "python_full_version >= '3.12'" },
-    { name = "h11", marker = "python_full_version >= '3.12'" },
+    { name = "certifi", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "h11", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b6/44/ed0fa6a17845fb033bd885c03e842f08c1b9406c86a2e60ac1ae1b9206a6/httpcore-1.0.6.tar.gz", hash = "sha256:73f6dbd6eb8c21bbf7ef8efad555481853f5f6acdeaff1edb0694289269ee17f", size = 85180 }
 wheels = [
@@ -491,11 +491,11 @@ name = "httpx"
 version = "0.27.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "anyio", marker = "python_full_version >= '3.12'" },
-    { name = "certifi", marker = "python_full_version >= '3.12'" },
-    { name = "httpcore", marker = "python_full_version >= '3.12'" },
-    { name = "idna", marker = "python_full_version >= '3.12'" },
-    { name = "sniffio", marker = "python_full_version >= '3.12'" },
+    { name = "anyio", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "certifi", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "httpcore", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "idna", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "sniffio", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/78/82/08f8c936781f67d9e6b9eeb8a0c8b4e406136ea4c3d1f89a5db71d42e0e6/httpx-0.27.2.tar.gz", hash = "sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2", size = 144189 }
 wheels = [
@@ -516,7 +516,7 @@ name = "imagecodecs"
 version = "2024.9.22"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/55/d8/dae2c21b5942627f6f540aabe5b58827a4367870a3cd36a81aa04f9aaf65/imagecodecs-2024.9.22.tar.gz", hash = "sha256:fea0801b4008d25e971918d991397a351bbe76276cfa98eed2de54cb87e894a3", size = 9483739 }
 wheels = [
@@ -541,8 +541,8 @@ name = "imageio"
 version = "2.35.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
-    { name = "pillow", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pillow", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/82/bf/d0ddda79819405428f40e4bc9245c2b936a3a2b23d83b6e42d83822ef822/imageio-2.35.1.tar.gz", hash = "sha256:4952dfeef3c3947957f6d5dedb1f4ca31c6e509a476891062396834048aeed2a", size = 389686 }
 wheels = [
@@ -563,19 +563,19 @@ name = "ipykernel"
 version = "6.29.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "appnope", marker = "platform_system == 'Darwin' and python_full_version >= '3.12'" },
-    { name = "comm", marker = "python_full_version >= '3.12'" },
-    { name = "debugpy", marker = "python_full_version >= '3.12'" },
-    { name = "ipython", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-client", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "matplotlib-inline", marker = "python_full_version >= '3.12'" },
-    { name = "nest-asyncio", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "psutil", marker = "python_full_version >= '3.12'" },
-    { name = "pyzmq", marker = "python_full_version >= '3.12'" },
-    { name = "tornado", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "appnope", marker = "(platform_system == 'Darwin' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "comm", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "debugpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "ipython", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-client", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "matplotlib-inline", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nest-asyncio", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "psutil", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pyzmq", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tornado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e9/5c/67594cb0c7055dc50814b21731c22a601101ea3b1b50a9a1b090e11f5d0f/ipykernel-6.29.5.tar.gz", hash = "sha256:f093a22c4a40f8828f8e330a9c297cb93dcab13bd9678ded6de8e5cf81c56215", size = 163367 }
 wheels = [
@@ -587,15 +587,15 @@ name = "ipython"
 version = "8.28.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "python_full_version >= '3.12' and sys_platform == 'win32'" },
-    { name = "decorator", marker = "python_full_version >= '3.12'" },
-    { name = "jedi", marker = "python_full_version >= '3.12'" },
-    { name = "matplotlib-inline", marker = "python_full_version >= '3.12'" },
-    { name = "pexpect", marker = "python_full_version >= '3.12' and sys_platform != 'emscripten' and sys_platform != 'win32'" },
-    { name = "prompt-toolkit", marker = "python_full_version >= '3.12'" },
-    { name = "pygments", marker = "python_full_version >= '3.12'" },
-    { name = "stack-data", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "colorama", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'aarch64' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'aarch64' and platform_system == 'Linux' and sys_platform == 'win32') or (platform_machine == 'arm64' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'arm64' and platform_system == 'Darwin' and sys_platform == 'win32')" },
+    { name = "decorator", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jedi", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "matplotlib-inline", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pexpect", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12' and sys_platform != 'emscripten' and sys_platform != 'win32') or (platform_machine == 'aarch64' and python_full_version >= '3.12' and sys_platform != 'emscripten' and sys_platform != 'win32') or (platform_machine == 'aarch64' and platform_system == 'Linux' and sys_platform != 'emscripten' and sys_platform != 'win32') or (platform_machine == 'arm64' and python_full_version >= '3.12' and sys_platform != 'emscripten' and sys_platform != 'win32') or (platform_machine == 'arm64' and platform_system == 'Darwin' and sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "prompt-toolkit", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pygments", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "stack-data", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f7/21/48db7d9dd622b9692575004c7c98f85f5629428f58596c59606d36c51b58/ipython-8.28.0.tar.gz", hash = "sha256:0d0d15ca1e01faeb868ef56bc7ee5a0de5bd66885735682e8a322ae289a13d1a", size = 5495762 }
 wheels = [
@@ -607,11 +607,11 @@ name = "ipywidgets"
 version = "8.1.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "comm", marker = "python_full_version >= '3.12'" },
-    { name = "ipython", marker = "python_full_version >= '3.12'" },
-    { name = "jupyterlab-widgets", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
-    { name = "widgetsnbextension", marker = "python_full_version >= '3.12'" },
+    { name = "comm", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "ipython", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyterlab-widgets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "widgetsnbextension", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c7/4c/dab2a281b07596a5fc220d49827fe6c794c66f1493d7a74f1df0640f2cc5/ipywidgets-8.1.5.tar.gz", hash = "sha256:870e43b1a35656a80c18c9503bbf2d16802db1cb487eec6fab27d683381dde17", size = 116723 }
 wheels = [
@@ -623,7 +623,7 @@ name = "isoduration"
 version = "20.11.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "arrow", marker = "python_full_version >= '3.12'" },
+    { name = "arrow", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/7c/1a/3c8edc664e06e6bd06cce40c6b22da5f1429aa4224d0c590f3be21c91ead/isoduration-20.11.0.tar.gz", hash = "sha256:ac2f9015137935279eac671f94f89eb00584f940f5dc49462a0c4ee692ba1bd9", size = 11649 }
 wheels = [
@@ -635,7 +635,7 @@ name = "jedi"
 version = "0.19.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "parso", marker = "python_full_version >= '3.12'" },
+    { name = "parso", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d6/99/99b493cec4bf43176b678de30f81ed003fd6a647a301b9c927280c600f0a/jedi-0.19.1.tar.gz", hash = "sha256:cf0496f3651bc65d7174ac1b7d043eff454892c708a87d1b683e57b569927ffd", size = 1227821 }
 wheels = [
@@ -647,7 +647,7 @@ name = "jinja2"
 version = "3.1.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "markupsafe", marker = "python_full_version >= '3.12'" },
+    { name = "markupsafe", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz", hash = "sha256:ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90", size = 268261 }
 wheels = [
@@ -686,10 +686,10 @@ name = "jsonschema"
 version = "4.23.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "attrs", marker = "python_full_version >= '3.12'" },
-    { name = "jsonschema-specifications", marker = "python_full_version >= '3.12'" },
-    { name = "referencing", marker = "python_full_version >= '3.12'" },
-    { name = "rpds-py", marker = "python_full_version >= '3.12'" },
+    { name = "attrs", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jsonschema-specifications", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "referencing", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "rpds-py", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/38/2e/03362ee4034a4c917f697890ccd4aec0800ccf9ded7f511971c75451deec/jsonschema-4.23.0.tar.gz", hash = "sha256:d71497fef26351a33265337fa77ffeb82423f3ea21283cd9467bb03999266bc4", size = 325778 }
 wheels = [
@@ -698,14 +698,14 @@ wheels = [
 
 [package.optional-dependencies]
 format-nongpl = [
-    { name = "fqdn", marker = "python_full_version >= '3.12'" },
-    { name = "idna", marker = "python_full_version >= '3.12'" },
-    { name = "isoduration", marker = "python_full_version >= '3.12'" },
-    { name = "jsonpointer", marker = "python_full_version >= '3.12'" },
-    { name = "rfc3339-validator", marker = "python_full_version >= '3.12'" },
-    { name = "rfc3986-validator", marker = "python_full_version >= '3.12'" },
-    { name = "uri-template", marker = "python_full_version >= '3.12'" },
-    { name = "webcolors", marker = "python_full_version >= '3.12'" },
+    { name = "fqdn", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "idna", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "isoduration", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jsonpointer", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "rfc3339-validator", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "rfc3986-validator", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "uri-template", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "webcolors", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 
 [[package]]
@@ -713,7 +713,7 @@ name = "jsonschema-specifications"
 version = "2023.12.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "referencing", marker = "python_full_version >= '3.12'" },
+    { name = "referencing", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f8/b9/cc0cc592e7c195fb8a650c1d5990b10175cf13b4c97465c72ec841de9e4b/jsonschema_specifications-2023.12.1.tar.gz", hash = "sha256:48a76787b3e70f5ed53f1160d2b81f586e4ca6d1548c5de7085d1682674764cc", size = 13983 }
 wheels = [
@@ -725,12 +725,12 @@ name = "jupyter"
 version = "1.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ipykernel", marker = "python_full_version >= '3.12'" },
-    { name = "ipywidgets", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-console", marker = "python_full_version >= '3.12'" },
-    { name = "jupyterlab", marker = "python_full_version >= '3.12'" },
-    { name = "nbconvert", marker = "python_full_version >= '3.12'" },
-    { name = "notebook", marker = "python_full_version >= '3.12'" },
+    { name = "ipykernel", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "ipywidgets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-console", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyterlab", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nbconvert", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "notebook", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/58/f3/af28ea964ab8bc1e472dba2e82627d36d470c51f5cd38c37502eeffaa25e/jupyter-1.1.1.tar.gz", hash = "sha256:d55467bceabdea49d7e3624af7e33d59c37fff53ed3a350e1ac957bed731de7a", size = 5714959 }
 wheels = [
@@ -742,11 +742,11 @@ name = "jupyter-client"
 version = "8.6.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "python-dateutil", marker = "python_full_version >= '3.12'" },
-    { name = "pyzmq", marker = "python_full_version >= '3.12'" },
-    { name = "tornado", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "python-dateutil", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pyzmq", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tornado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/71/22/bf9f12fdaeae18019a468b68952a60fe6dbab5d67cd2a103cac7659b41ca/jupyter_client-8.6.3.tar.gz", hash = "sha256:35b3a0947c4a6e9d589eb97d7d4cd5e90f910ee73101611f01283732bd6d9419", size = 342019 }
 wheels = [
@@ -758,14 +758,14 @@ name = "jupyter-console"
 version = "6.6.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ipykernel", marker = "python_full_version >= '3.12'" },
-    { name = "ipython", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-client", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "prompt-toolkit", marker = "python_full_version >= '3.12'" },
-    { name = "pygments", marker = "python_full_version >= '3.12'" },
-    { name = "pyzmq", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "ipykernel", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "ipython", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-client", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "prompt-toolkit", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pygments", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pyzmq", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/bd/2d/e2fd31e2fc41c14e2bcb6c976ab732597e907523f6b2420305f9fc7fdbdb/jupyter_console-6.6.3.tar.gz", hash = "sha256:566a4bf31c87adbfadf22cdf846e3069b59a71ed5da71d6ba4d8aaad14a53539", size = 34363 }
 wheels = [
@@ -777,9 +777,9 @@ name = "jupyter-core"
 version = "5.7.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "platformdirs", marker = "python_full_version >= '3.12'" },
-    { name = "pywin32", marker = "platform_python_implementation != 'PyPy' and python_full_version >= '3.12' and sys_platform == 'win32'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "platformdirs", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pywin32", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12' and platform_python_implementation != 'PyPy' and sys_platform == 'win32') or (platform_machine == 'aarch64' and platform_python_implementation != 'PyPy' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'aarch64' and platform_python_implementation != 'PyPy' and platform_system == 'Linux' and sys_platform == 'win32') or (platform_machine == 'arm64' and platform_python_implementation != 'PyPy' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'arm64' and platform_python_implementation != 'PyPy' and platform_system == 'Darwin' and sys_platform == 'win32')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/00/11/b56381fa6c3f4cc5d2cf54a7dbf98ad9aa0b339ef7a601d6053538b079a7/jupyter_core-5.7.2.tar.gz", hash = "sha256:aa5f8d32bbf6b431ac830496da7392035d6f61b4f54872f15c4bd2a9c3f536d9", size = 87629 }
 wheels = [
@@ -791,13 +791,13 @@ name = "jupyter-events"
 version = "0.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jsonschema", extra = ["format-nongpl"], marker = "python_full_version >= '3.12'" },
-    { name = "python-json-logger", marker = "python_full_version >= '3.12'" },
-    { name = "pyyaml", marker = "python_full_version >= '3.12'" },
-    { name = "referencing", marker = "python_full_version >= '3.12'" },
-    { name = "rfc3339-validator", marker = "python_full_version >= '3.12'" },
-    { name = "rfc3986-validator", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "jsonschema", extra = ["format-nongpl"], marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "python-json-logger", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pyyaml", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "referencing", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "rfc3339-validator", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "rfc3986-validator", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/8d/53/7537a1aa558229bb0b1b178d814c9d68a9c697d3aecb808a1cb2646acf1f/jupyter_events-0.10.0.tar.gz", hash = "sha256:670b8229d3cc882ec782144ed22e0d29e1c2d639263f92ca8383e66682845e22", size = 61516 }
 wheels = [
@@ -809,7 +809,7 @@ name = "jupyter-lsp"
 version = "2.2.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jupyter-server", marker = "python_full_version >= '3.12'" },
+    { name = "jupyter-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/85/b4/3200b0b09c12bc3b72d943d923323c398eff382d1dcc7c0dbc8b74630e40/jupyter-lsp-2.2.5.tar.gz", hash = "sha256:793147a05ad446f809fd53ef1cd19a9f5256fd0a2d6b7ce943a982cb4f545001", size = 48741 }
 wheels = [
@@ -821,25 +821,25 @@ name = "jupyter-server"
 version = "2.14.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "anyio", marker = "python_full_version >= '3.12'" },
-    { name = "argon2-cffi", marker = "python_full_version >= '3.12'" },
-    { name = "jinja2", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-client", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-events", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-server-terminals", marker = "python_full_version >= '3.12'" },
-    { name = "nbconvert", marker = "python_full_version >= '3.12'" },
-    { name = "nbformat", marker = "python_full_version >= '3.12'" },
-    { name = "overrides", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "prometheus-client", marker = "python_full_version >= '3.12'" },
-    { name = "pywinpty", marker = "os_name == 'nt' and python_full_version >= '3.12'" },
-    { name = "pyzmq", marker = "python_full_version >= '3.12'" },
-    { name = "send2trash", marker = "python_full_version >= '3.12'" },
-    { name = "terminado", marker = "python_full_version >= '3.12'" },
-    { name = "tornado", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
-    { name = "websocket-client", marker = "python_full_version >= '3.12'" },
+    { name = "anyio", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "argon2-cffi", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jinja2", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-client", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-events", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-server-terminals", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nbconvert", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nbformat", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "overrides", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "prometheus-client", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pywinpty", marker = "(os_name == 'nt' and platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'aarch64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'aarch64' and platform_system == 'Linux') or (os_name == 'nt' and platform_machine == 'arm64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pyzmq", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "send2trash", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "terminado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tornado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "websocket-client", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/0c/34/88b47749c7fa9358e10eac356c4b97d94a91a67d5c935a73f69bc4a31118/jupyter_server-2.14.2.tar.gz", hash = "sha256:66095021aa9638ced276c248b1d81862e4c50f292d575920bbe960de1c56b12b", size = 719933 }
 wheels = [
@@ -851,8 +851,8 @@ name = "jupyter-server-terminals"
 version = "0.5.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pywinpty", marker = "os_name == 'nt' and python_full_version >= '3.12'" },
-    { name = "terminado", marker = "python_full_version >= '3.12'" },
+    { name = "pywinpty", marker = "(os_name == 'nt' and platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'aarch64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'aarch64' and platform_system == 'Linux') or (os_name == 'nt' and platform_machine == 'arm64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "terminado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fc/d5/562469734f476159e99a55426d697cbf8e7eb5efe89fb0e0b4f83a3d3459/jupyter_server_terminals-0.5.3.tar.gz", hash = "sha256:5ae0295167220e9ace0edcfdb212afd2b01ee8d179fe6f23c899590e9b8a5269", size = 31430 }
 wheels = [
@@ -864,18 +864,18 @@ name = "jupyterlab"
 version = "4.1.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "async-lru", marker = "python_full_version >= '3.12'" },
-    { name = "httpx", marker = "python_full_version >= '3.12'" },
-    { name = "ipykernel", marker = "python_full_version >= '3.12'" },
-    { name = "jinja2", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-lsp", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-server", marker = "python_full_version >= '3.12'" },
-    { name = "jupyterlab-server", marker = "python_full_version >= '3.12'" },
-    { name = "notebook-shim", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "tornado", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "async-lru", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "httpx", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "ipykernel", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jinja2", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-lsp", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyterlab-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "notebook-shim", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tornado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/c2/decb25538588ed104ada22c31d1845b1500f98806e3261b94f0333e8b099/jupyterlab-4.1.6.tar.gz", hash = "sha256:7935f36ba26eb615183a4f5c2bbca5791b5108ce2a00b5505f8cfd100d53648e", size = 21773628 }
 wheels = [
@@ -896,13 +896,13 @@ name = "jupyterlab-server"
 version = "2.24.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "babel", marker = "python_full_version >= '3.12'" },
-    { name = "jinja2", marker = "python_full_version >= '3.12'" },
-    { name = "json5", marker = "python_full_version >= '3.12'" },
-    { name = "jsonschema", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-server", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "requests", marker = "python_full_version >= '3.12'" },
+    { name = "babel", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jinja2", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "json5", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jsonschema", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "requests", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1e/29/d867a88db915b54ff1025a9c0576b051687ac5baa5f7cd723e22069606de/jupyterlab_server-2.24.0.tar.gz", hash = "sha256:4e6f99e0a5579bbbc32e449c4dbb039561d4f1a7827d5733273ed56738f21f07", size = 72145 }
 wheels = [
@@ -963,7 +963,7 @@ name = "lazy-loader"
 version = "0.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/6f/6b/c875b30a1ba490860c93da4cabf479e03f584eba06fe5963f6f6644653d8/lazy_loader-0.4.tar.gz", hash = "sha256:47c75182589b91a4e1a85a136c074285a5ad4d9f39c63e0d7fb76391c4574cd1", size = 15431 }
 wheels = [
@@ -1006,15 +1006,15 @@ name = "matplotlib"
 version = "3.9.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "contourpy", marker = "python_full_version >= '3.12'" },
-    { name = "cycler", marker = "python_full_version >= '3.12'" },
-    { name = "fonttools", marker = "python_full_version >= '3.12'" },
-    { name = "kiwisolver", marker = "python_full_version >= '3.12'" },
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "pillow", marker = "python_full_version >= '3.12'" },
-    { name = "pyparsing", marker = "python_full_version >= '3.12'" },
-    { name = "python-dateutil", marker = "python_full_version >= '3.12'" },
+    { name = "contourpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "cycler", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "fonttools", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "kiwisolver", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pillow", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pyparsing", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "python-dateutil", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/9e/d8/3d7f706c69e024d4287c1110d74f7dabac91d9843b99eadc90de9efc8869/matplotlib-3.9.2.tar.gz", hash = "sha256:96ab43906269ca64a6366934106fa01534454a69e471b7bf3d79083981aaab92", size = 36088381 }
 wheels = [
@@ -1042,7 +1042,7 @@ name = "matplotlib-inline"
 version = "0.1.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/99/5b/a36a337438a14116b16480db471ad061c36c3694df7c2084a0da7ba538b7/matplotlib_inline-0.1.7.tar.gz", hash = "sha256:8423b23ec666be3d16e16b60bdd8ac4e86e840ebd1dd11a30b9f117f2fa0ab90", size = 8159 }
 wheels = [
@@ -1081,10 +1081,10 @@ name = "nbclient"
 version = "0.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jupyter-client", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "nbformat", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "jupyter-client", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nbformat", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e2/d2/39bc36604f24bccd44d374ac34769bc58c53a1da5acd1e83f0165aa4940e/nbclient-0.10.0.tar.gz", hash = "sha256:4b3f1b7dba531e498449c4db4f53da339c91d449dc11e9af3a43b4eb5c5abb09", size = 62246 }
 wheels = [
@@ -1096,21 +1096,21 @@ name = "nbconvert"
 version = "7.16.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "beautifulsoup4", marker = "python_full_version >= '3.12'" },
-    { name = "bleach", marker = "python_full_version >= '3.12'" },
-    { name = "defusedxml", marker = "python_full_version >= '3.12'" },
-    { name = "jinja2", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "jupyterlab-pygments", marker = "python_full_version >= '3.12'" },
-    { name = "markupsafe", marker = "python_full_version >= '3.12'" },
-    { name = "mistune", marker = "python_full_version >= '3.12'" },
-    { name = "nbclient", marker = "python_full_version >= '3.12'" },
-    { name = "nbformat", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "pandocfilters", marker = "python_full_version >= '3.12'" },
-    { name = "pygments", marker = "python_full_version >= '3.12'" },
-    { name = "tinycss2", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "beautifulsoup4", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "bleach", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "defusedxml", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jinja2", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyterlab-pygments", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "markupsafe", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "mistune", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nbclient", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "nbformat", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pandocfilters", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pygments", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tinycss2", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/af/e8/ba521a033b21132008e520c28ceb818f9f092da5f0261e94e509401b29f9/nbconvert-7.16.4.tar.gz", hash = "sha256:86ca91ba266b0a448dc96fa6c5b9d98affabde2867b363258703536807f9f7f4", size = 854422 }
 wheels = [
@@ -1122,10 +1122,10 @@ name = "nbformat"
 version = "5.10.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "fastjsonschema", marker = "python_full_version >= '3.12'" },
-    { name = "jsonschema", marker = "python_full_version >= '3.12'" },
-    { name = "jupyter-core", marker = "python_full_version >= '3.12'" },
-    { name = "traitlets", marker = "python_full_version >= '3.12'" },
+    { name = "fastjsonschema", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jsonschema", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyter-core", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "traitlets", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/6d/fd/91545e604bc3dad7dca9ed03284086039b294c6b3d75c0d2fa45f9e9caf3/nbformat-5.10.4.tar.gz", hash = "sha256:322168b14f937a5d11362988ecac2a4952d3d8e3a2cbeb2319584631226d5b3a", size = 142749 }
 wheels = [
@@ -1155,11 +1155,11 @@ name = "notebook"
 version = "7.1.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jupyter-server", marker = "python_full_version >= '3.12'" },
-    { name = "jupyterlab", marker = "python_full_version >= '3.12'" },
-    { name = "jupyterlab-server", marker = "python_full_version >= '3.12'" },
-    { name = "notebook-shim", marker = "python_full_version >= '3.12'" },
-    { name = "tornado", marker = "python_full_version >= '3.12'" },
+    { name = "jupyter-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyterlab", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jupyterlab-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "notebook-shim", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tornado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/65/38/f2c6cb06f3c4997980ad27713f23378616761fd8d36013c9cdd0d9c54ad2/notebook-7.1.3.tar.gz", hash = "sha256:41fcebff44cf7bb9377180808bcbae066629b55d8c7722f1ebbe75ca44f9cfc1", size = 4897695 }
 wheels = [
@@ -1171,7 +1171,7 @@ name = "notebook-shim"
 version = "0.2.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jupyter-server", marker = "python_full_version >= '3.12'" },
+    { name = "jupyter-server", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/54/d2/92fa3243712b9a3e8bafaf60aac366da1cada3639ca767ff4b5b3654ec28/notebook_shim-0.2.4.tar.gz", hash = "sha256:b4b2cfa1b65d98307ca24361f5b30fe785b53c3fd07b7a47e89acb5e6ac638cb", size = 13167 }
 wheels = [
@@ -1183,8 +1183,8 @@ name = "numba"
 version = "0.60.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "llvmlite", marker = "python_full_version >= '3.12'" },
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "llvmlite", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3c/93/2849300a9184775ba274aba6f82f303343669b0592b7bb0849ea713dabb0/numba-0.60.0.tar.gz", hash = "sha256:5df6158e5584eece5fc83294b949fd30b9f1125df7708862205217e068aabf16", size = 2702171 }
 wheels = [
@@ -1325,7 +1325,7 @@ name = "opencv-python-headless"
 version = "3.4.18.65"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f4/9d/10bd41b96bcf9ed9808e131c298d696f27c087338126d54a1fa050771a4d/opencv-python-headless-3.4.18.65.tar.gz", hash = "sha256:f7c3e5459296e832e922350a7140b94192d3a0c330882eea45d8f65516434550", size = 88067493 }
 wheels = [
@@ -1378,7 +1378,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess", marker = "python_full_version >= '3.12'" },
+    { name = "ptyprocess", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450 }
 wheels = [
@@ -1436,7 +1436,7 @@ name = "prompt-toolkit"
 version = "3.0.48"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "wcwidth", marker = "python_full_version >= '3.12'" },
+    { name = "wcwidth", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/2d/4f/feb5e137aff82f7c7f3248267b97451da3644f6cdc218edfe549fb354127/prompt_toolkit-3.0.48.tar.gz", hash = "sha256:d6623ab0477a80df74e646bdbc93621143f5caf104206aa29294d53de1a03d90", size = 424684 }
 wheels = [
@@ -1510,10 +1510,10 @@ name = "pytest"
 version = "8.3.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "python_full_version >= '3.12' and sys_platform == 'win32'" },
-    { name = "iniconfig", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "pluggy", marker = "python_full_version >= '3.12'" },
+    { name = "colorama", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'aarch64' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'aarch64' and platform_system == 'Linux' and sys_platform == 'win32') or (platform_machine == 'arm64' and python_full_version >= '3.12' and sys_platform == 'win32') or (platform_machine == 'arm64' and platform_system == 'Darwin' and sys_platform == 'win32')" },
+    { name = "iniconfig", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pluggy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/8b/6c/62bbd536103af674e227c41a8f3dcd022d591f6eed5facb5a0f31ee33bbc/pytest-8.3.3.tar.gz", hash = "sha256:70b98107bd648308a7952b06e6ca9a50bc660be218d53c257cc1fc94fda10181", size = 1442487 }
 wheels = [
@@ -1525,7 +1525,7 @@ name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "six", marker = "python_full_version >= '3.12'" },
+    { name = "six", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432 }
 wheels = [
@@ -1594,7 +1594,7 @@ name = "pyzmq"
 version = "26.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi", marker = "implementation_name == 'pypy' and python_full_version >= '3.12'" },
+    { name = "cffi", marker = "(implementation_name == 'pypy' and platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (implementation_name == 'pypy' and platform_machine == 'aarch64' and python_full_version >= '3.12') or (implementation_name == 'pypy' and platform_machine == 'aarch64' and platform_system == 'Linux') or (implementation_name == 'pypy' and platform_machine == 'arm64' and python_full_version >= '3.12') or (implementation_name == 'pypy' and platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fd/05/bed626b9f7bb2322cdbbf7b4bd8f54b1b617b0d2ab2d3547d6e39428a48e/pyzmq-26.2.0.tar.gz", hash = "sha256:070672c258581c8e4f640b5159297580a9974b026043bd4ab0470be9ed324f1f", size = 271975 }
 wheels = [
@@ -1638,8 +1638,8 @@ name = "referencing"
 version = "0.35.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "attrs", marker = "python_full_version >= '3.12'" },
-    { name = "rpds-py", marker = "python_full_version >= '3.12'" },
+    { name = "attrs", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "rpds-py", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/99/5b/73ca1f8e72fff6fa52119dbd185f73a907b1989428917b24cff660129b6d/referencing-0.35.1.tar.gz", hash = "sha256:25b42124a6c8b632a425174f24087783efb348a6f1e0008e63cd4466fedf703c", size = 62991 }
 wheels = [
@@ -1651,10 +1651,10 @@ name = "requests"
 version = "2.28.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "certifi", marker = "python_full_version >= '3.12'" },
-    { name = "charset-normalizer", marker = "python_full_version >= '3.12'" },
-    { name = "idna", marker = "python_full_version >= '3.12'" },
-    { name = "urllib3", marker = "python_full_version >= '3.12'" },
+    { name = "certifi", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "charset-normalizer", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "idna", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "urllib3", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz", hash = "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983", size = 109805 }
 wheels = [
@@ -1666,7 +1666,7 @@ name = "rfc3339-validator"
 version = "0.1.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "six", marker = "python_full_version >= '3.12'" },
+    { name = "six", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/28/ea/a9387748e2d111c3c2b275ba970b735e04e15cdb1eb30693b6b5708c4dbd/rfc3339_validator-0.1.4.tar.gz", hash = "sha256:138a2abdf93304ad60530167e51d2dfb9549521a836871b88d7f4695d0022f6b", size = 5513 }
 wheels = [
@@ -1687,7 +1687,7 @@ name = "roifile"
 version = "2024.9.15"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/16/e9/6981c0b954963e9c8235d55ff0fa7f40e017cc8205fcbfb8a6591c58a77e/roifile-2024.9.15.tar.gz", hash = "sha256:5a4e6925bec15c1d9e2805601176eeabc0be808f5a6e77b62bb67776116f8f3c", size = 18356 }
 wheels = [
@@ -1758,7 +1758,7 @@ name = "s3transfer"
 version = "0.10.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "botocore", marker = "python_full_version >= '3.12'" },
+    { name = "botocore", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cb/67/94c6730ee4c34505b14d94040e2f31edf144c230b6b49e971b4f25ff8fab/s3transfer-0.10.2.tar.gz", hash = "sha256:0711534e9356d3cc692fdde846b4a1e4b0cb6519971860796e6bc4c7aea00ef6", size = 144095 }
 wheels = [
@@ -1770,14 +1770,14 @@ name = "scikit-image"
 version = "0.24.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "imageio", marker = "python_full_version >= '3.12'" },
-    { name = "lazy-loader", marker = "python_full_version >= '3.12'" },
-    { name = "networkx", marker = "python_full_version >= '3.12'" },
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
-    { name = "packaging", marker = "python_full_version >= '3.12'" },
-    { name = "pillow", marker = "python_full_version >= '3.12'" },
-    { name = "scipy", marker = "python_full_version >= '3.12'" },
-    { name = "tifffile", marker = "python_full_version >= '3.12'" },
+    { name = "imageio", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "lazy-loader", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "networkx", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "packaging", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pillow", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "scipy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tifffile", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/5d/c5/bcd66bf5aae5587d3b4b69c74bee30889c46c9778e858942ce93a030e1f3/scikit_image-0.24.0.tar.gz", hash = "sha256:5d16efe95da8edbeb363e0c4157b99becbd650a60b77f6e3af5768b66cf007ab", size = 22693928 }
 wheels = [
@@ -1793,7 +1793,7 @@ name = "scipy"
 version = "1.14.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/62/11/4d44a1f274e002784e4dbdb81e0ea96d2de2d1045b2132d5af62cc31fd28/scipy-1.14.1.tar.gz", hash = "sha256:5a275584e726026a5699459aa72f828a610821006228e841b94275c4a7c08417", size = 58620554 }
 wheels = [
@@ -1865,9 +1865,9 @@ name = "stack-data"
 version = "0.6.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "asttokens", marker = "python_full_version >= '3.12'" },
-    { name = "executing", marker = "python_full_version >= '3.12'" },
-    { name = "pure-eval", marker = "python_full_version >= '3.12'" },
+    { name = "asttokens", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "executing", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pure-eval", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/28/e3/55dcc2cfbc3ca9c29519eb6884dd1415ecb53b0e934862d3559ddcb7e20b/stack_data-0.6.3.tar.gz", hash = "sha256:836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9", size = 44707 }
 wheels = [
@@ -1879,7 +1879,7 @@ name = "sympy"
 version = "1.13.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "mpmath", marker = "python_full_version >= '3.12'" },
+    { name = "mpmath", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/11/8a/5a7fd6284fa8caac23a26c9ddf9c30485a48169344b4bd3b0f02fef1890f/sympy-1.13.3.tar.gz", hash = "sha256:b27fd2c6530e0ab39e275fc9b683895367e51d5da91baa8d3d64db2565fec4d9", size = 7533196 }
 wheels = [
@@ -1891,9 +1891,9 @@ name = "terminado"
 version = "0.18.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess", marker = "os_name != 'nt' and python_full_version >= '3.12'" },
-    { name = "pywinpty", marker = "os_name == 'nt' and python_full_version >= '3.12'" },
-    { name = "tornado", marker = "python_full_version >= '3.12'" },
+    { name = "ptyprocess", marker = "(os_name != 'nt' and platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (os_name != 'nt' and platform_machine == 'aarch64' and python_full_version >= '3.12') or (os_name != 'nt' and platform_machine == 'aarch64' and platform_system == 'Linux') or (os_name != 'nt' and platform_machine == 'arm64' and python_full_version >= '3.12') or (os_name != 'nt' and platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "pywinpty", marker = "(os_name == 'nt' and platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'aarch64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'aarch64' and platform_system == 'Linux') or (os_name == 'nt' and platform_machine == 'arm64' and python_full_version >= '3.12') or (os_name == 'nt' and platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "tornado", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/8a/11/965c6fd8e5cc254f1fe142d547387da17a8ebfd75a3455f637c663fb38a0/terminado-0.18.1.tar.gz", hash = "sha256:de09f2c4b85de4765f7714688fff57d3e75bad1f909b589fde880460c753fd2e", size = 32701 }
 wheels = [
@@ -1905,7 +1905,7 @@ name = "tifffile"
 version = "2024.9.20"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "numpy", marker = "python_full_version >= '3.12'" },
+    { name = "numpy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f2/14/6fe362c483166b3a44521ac5c92c98f096bd7fb05512e8730d0e23e152c9/tifffile-2024.9.20.tar.gz", hash = "sha256:3fbf3be2f995a7051a8ae05a4be70c96fc0789f22ed6f1c4104c973cf68a640b", size = 367207 }
 wheels = [
@@ -1917,7 +1917,7 @@ name = "tinycss2"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "webencodings", marker = "python_full_version >= '3.12'" },
+    { name = "webencodings", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/44/6f/38d2335a2b70b9982d112bb177e3dbe169746423e33f718bf5e9c7b3ddd3/tinycss2-1.3.0.tar.gz", hash = "sha256:152f9acabd296a8375fbca5b84c961ff95971fcfc32e79550c8df8e29118c54d", size = 67360 }
 wheels = [
@@ -1929,10 +1929,10 @@ name = "torch"
 version = "2.4.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "filelock", marker = "python_full_version >= '3.12'" },
-    { name = "fsspec", marker = "python_full_version >= '3.12'" },
-    { name = "jinja2", marker = "python_full_version >= '3.12'" },
-    { name = "networkx", marker = "python_full_version >= '3.12'" },
+    { name = "filelock", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "fsspec", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "jinja2", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "networkx", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
     { name = "nvidia-cublas-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
     { name = "nvidia-cuda-cupti-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
     { name = "nvidia-cuda-nvrtc-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
@@ -1944,10 +1944,10 @@ dependencies = [
     { name = "nvidia-cusparse-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
     { name = "nvidia-nccl-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
     { name = "nvidia-nvtx-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "setuptools", marker = "python_full_version >= '3.12'" },
-    { name = "sympy", marker = "python_full_version >= '3.12'" },
+    { name = "setuptools", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
+    { name = "sympy", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
     { name = "triton", marker = "python_full_version < '3.13' and platform_machine == 'x86_64' and python_full_version >= '3.12' and platform_system == 'Linux'" },
-    { name = "typing-extensions", marker = "python_full_version >= '3.12'" },
+    { name = "typing-extensions", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and python_full_version >= '3.12') or (platform_machine == 'aarch64' and platform_system == 'Linux') or (platform_machine == 'arm64' and python_full_version >= '3.12') or (platform_machine == 'arm64' and platform_system == 'Darwin')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cc/df/5204a13a7a973c23c7ade615bafb1a3112b5d0ec258d8390f078fa4ab0f7/torch-2.4.1-cp312-cp312-manylinux1_x86_64.whl", hash = "sha256:fdc4fe11db3eb93c1115d3e973a27ac7c1a8318af8934ffa36b0370efe28e042", size = 797019590 },

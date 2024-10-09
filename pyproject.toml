@@ -1,5 +1,5 @@
 [project]
-name = "cell-segmention"
+name = "cell-segmentation"
 version = "0.1.0"
 description = "A pipeline for segmenting cells from microscopy images"
 readme = "README.md"
