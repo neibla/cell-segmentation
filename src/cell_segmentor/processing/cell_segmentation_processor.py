@@ -28,7 +28,7 @@ class CellSegmentationProcessor:
         self.device = device
         self.logger.info(f"Using device: {self.device}")
 
-        self.model = get_cellpose_model(model_type)
+        self.model = get_cellpose_model(model_type, device=self.device)
         self.logger.info(f"Loaded Cellpose model {model_type}")
         self.num_workers = num_workers
 
