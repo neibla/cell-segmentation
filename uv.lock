@@ -176,6 +176,7 @@ source = { editable = "." }
 dependencies = [
     { name = "boto3" },
     { name = "cellpose" },
+    { name = "numpy" },
     { name = "opencv-python-headless" },
     { name = "scikit-image" },
     { name = "torch" },
@@ -193,7 +194,8 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = ">=1.35.34" },
-    { name = "cellpose", git = "https://github.com/MouseLand/cellpose?rev=52f75f9636250979dcff48da18d24aaff41c2c86" },
+    { name = "cellpose" },
+    { name = "numpy", specifier = "<2" },
     { name = "opencv-python-headless", specifier = "<4.3" },
     { name = "scikit-image", specifier = ">=0.24.0" },
     { name = "torch", specifier = "==2.4.1" },
@@ -210,8 +212,8 @@ dev = [
 
 [[package]]
 name = "cellpose"
-version = "3.0.12.dev87+g52f75f9"
-source = { git = "https://github.com/MouseLand/cellpose?rev=52f75f9636250979dcff48da18d24aaff41c2c86#52f75f9636250979dcff48da18d24aaff41c2c86" }
+version = "3.0.11"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "fastremap" },
     { name = "imagecodecs" },
@@ -225,6 +227,10 @@ dependencies = [
     { name = "tifffile" },
     { name = "torch" },
     { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/64/25/566e0ec2f42fa6be7ec4225ee3b71670d31471ce1381ae5bffdd318b24dc/cellpose-3.0.11.tar.gz", hash = "sha256:a8d902e7fe76fe0319871ac9426dd8d1d3d526f014d51c070918762939ce40db", size = 23299394 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/7c/ed5a019a665945c0edfa6a8c7a973de3849550d7a20c281fddd10755eed7/cellpose-3.0.11-py3-none-any.whl", hash = "sha256:b9d2d7ffac746fed0a2eebfe31c67d905f072726e563e4427c0df9876f690b5c", size = 205180 },
 ]
 
 [[package]]
@@ -1975,14 +1981,14 @@ wheels = [
 
 [[package]]
 name = "tqdm"
-version = "4.64.1"
+version = "4.66.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "platform_system == 'Windows'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c1/c2/d8a40e5363fb01806870e444fc1d066282743292ff32a9da54af51ce36a2/tqdm-4.64.1.tar.gz", hash = "sha256:5f4f682a004951c1b450bc753c710e9280c5746ce6ffedee253ddbcbf54cf1e4", size = 169599 }
+sdist = { url = "https://files.pythonhosted.org/packages/58/83/6ba9844a41128c62e810fddddd72473201f3eacde02046066142a2d96cc5/tqdm-4.66.5.tar.gz", hash = "sha256:e1020aef2e5096702d8a025ac7d16b1577279c9d63f8375b63083e9a5f0fcbad", size = 169504 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/47/bb/849011636c4da2e44f1253cd927cfb20ada4374d8b3a4e425416e84900cc/tqdm-4.64.1-py2.py3-none-any.whl", hash = "sha256:6fee160d6ffcd1b1c68c65f14c829c22832bc401726335ce92c52d395944a6a1", size = 78468 },
+    { url = "https://files.pythonhosted.org/packages/48/5d/acf5905c36149bbaec41ccf7f2b68814647347b72075ac0b1fe3022fdc73/tqdm-4.66.5-py3-none-any.whl", hash = "sha256:90279a3770753eafc9194a0364852159802111925aa30eb3f9d85b0e805ac7cd", size = 78351 },
 ]
 
 [[package]]
