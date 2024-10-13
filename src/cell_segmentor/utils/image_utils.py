@@ -27,15 +27,18 @@ def load_image(image_path: str) -> Optional[np.ndarray]:
 
 
 def save_mask(mask: np.ndarray, output_path: str) -> None:
+    data = {"mask": mask}
     if is_s3_path(output_path):
         with BytesIO() as buffer:
-            np.save(buffer, mask)
+            np.savez_compressed(buffer, **data)
             buffer.seek(0)
             upload_to_s3(buffer.getvalue(), output_path)
     else:
         # Ensure the directory exists
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        np.save(output_path, mask)
+        dir_path = os.path.dirname(output_path)
+        os.makedirs(dir_path, exist_ok=True)
+        np.savez_compressed(output_path, **data)
+
 
 
 def save_image(image: np.ndarray, output_path: str) -> None:
