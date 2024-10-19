@@ -5,8 +5,10 @@ resolution-markers = [
     "python_full_version >= '3.13' and platform_machine == 'arm64' and platform_system == 'Darwin'",
     "python_full_version < '3.13' and platform_machine == 'aarch64' and platform_system == 'Linux'",
     "python_full_version >= '3.13' and platform_machine == 'aarch64' and platform_system == 'Linux'",
-    "(python_full_version < '3.13' and platform_machine != 'aarch64' and platform_machine != 'arm64') or (python_full_version < '3.13' and platform_machine == 'aarch64' and platform_system != 'Linux') or (python_full_version < '3.13' and platform_machine == 'arm64' and platform_system != 'Darwin')",
-    "(python_full_version >= '3.13' and platform_machine != 'aarch64' and platform_machine != 'arm64') or (python_full_version >= '3.13' and platform_machine == 'aarch64' and platform_system != 'Linux') or (python_full_version >= '3.13' and platform_machine == 'arm64' and platform_system != 'Darwin')",
+    "python_full_version < '3.13' and platform_machine != 'arm64' and platform_system == 'Darwin'",
+    "(python_full_version < '3.13' and platform_machine != 'aarch64' and platform_system != 'Darwin') or (python_full_version < '3.13' and platform_system != 'Darwin' and platform_system != 'Linux')",
+    "python_full_version >= '3.13' and platform_machine != 'arm64' and platform_system == 'Darwin'",
+    "(python_full_version >= '3.13' and platform_machine != 'aarch64' and platform_system != 'Darwin') or (python_full_version >= '3.13' and platform_system != 'Darwin' and platform_system != 'Linux')",
 ]
 
 [[package]]
@@ -194,11 +196,11 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = ">=1.35.34" },
-    { name = "cellpose" },
+    { name = "cellpose", git = "https://github.com/MouseLand/cellpose?rev=52f75f9636250979dcff48da18d24aaff41c2c86" },
     { name = "numpy", specifier = "<2" },
     { name = "opencv-python-headless", specifier = "<4.3" },
     { name = "scikit-image", specifier = ">=0.24.0" },
-    { name = "torch", specifier = "==2.4.1" },
+    { name = "torch", specifier = "<3" },
 ]
 
 [package.metadata.requires-dev]
@@ -212,8 +214,8 @@ dev = [
 
 [[package]]
 name = "cellpose"
-version = "3.0.11"
-source = { registry = "https://pypi.org/simple" }
+version = "3.0.12.dev87+g52f75f9"
+source = { git = "https://github.com/MouseLand/cellpose?rev=52f75f9636250979dcff48da18d24aaff41c2c86#52f75f9636250979dcff48da18d24aaff41c2c86" }
 dependencies = [
     { name = "fastremap" },
     { name = "imagecodecs" },
@@ -227,10 +229,6 @@ dependencies = [
     { name = "tifffile" },
     { name = "torch" },
     { name = "tqdm" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/64/25/566e0ec2f42fa6be7ec4225ee3b71670d31471ce1381ae5bffdd318b24dc/cellpose-3.0.11.tar.gz", hash = "sha256:a8d902e7fe76fe0319871ac9426dd8d1d3d526f014d51c070918762939ce40db", size = 23299394 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/66/7c/ed5a019a665945c0edfa6a8c7a973de3849550d7a20c281fddd10755eed7/cellpose-3.0.11-py3-none-any.whl", hash = "sha256:b9d2d7ffac746fed0a2eebfe31c67d905f072726e563e4427c0df9876f690b5c", size = 205180 },
 ]
 
 [[package]]
@@ -1253,7 +1251,7 @@ name = "nvidia-cudnn-cu12"
 version = "9.1.0.70"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "nvidia-cublas-cu12", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64') or (platform_machine == 'aarch64' and platform_system != 'Linux') or (platform_machine == 'arm64' and platform_system != 'Darwin')" },
+    { name = "nvidia-cublas-cu12", marker = "(platform_machine != 'aarch64' and platform_system != 'Darwin') or (platform_system != 'Darwin' and platform_system != 'Linux')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9f/fd/713452cd72343f682b1c7b9321e23829f00b842ceaedcda96e742ea0b0b3/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl", hash = "sha256:165764f44ef8c61fcdfdfdbe769d687e06374059fbb388b6c89ecb0e28793a6f", size = 664752741 },
@@ -1280,9 +1278,9 @@ name = "nvidia-cusolver-cu12"
 version = "11.4.5.107"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "nvidia-cublas-cu12", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64') or (platform_machine == 'aarch64' and platform_system != 'Linux') or (platform_machine == 'arm64' and platform_system != 'Darwin')" },
-    { name = "nvidia-cusparse-cu12", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64') or (platform_machine == 'aarch64' and platform_system != 'Linux') or (platform_machine == 'arm64' and platform_system != 'Darwin')" },
-    { name = "nvidia-nvjitlink-cu12", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64') or (platform_machine == 'aarch64' and platform_system != 'Linux') or (platform_machine == 'arm64' and platform_system != 'Darwin')" },
+    { name = "nvidia-cublas-cu12", marker = "(platform_machine != 'aarch64' and platform_system != 'Darwin') or (platform_system != 'Darwin' and platform_system != 'Linux')" },
+    { name = "nvidia-cusparse-cu12", marker = "(platform_machine != 'aarch64' and platform_system != 'Darwin') or (platform_system != 'Darwin' and platform_system != 'Linux')" },
+    { name = "nvidia-nvjitlink-cu12", marker = "(platform_machine != 'aarch64' and platform_system != 'Darwin') or (platform_system != 'Darwin' and platform_system != 'Linux')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/bc/1d/8de1e5c67099015c834315e333911273a8c6aaba78923dd1d1e25fc5f217/nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl", hash = "sha256:8a7ec542f0412294b15072fa7dab71d31334014a69f953004ea7a118206fe0dd", size = 124161928 },
@@ -1293,7 +1291,7 @@ name = "nvidia-cusparse-cu12"
 version = "12.1.0.106"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64') or (platform_machine == 'aarch64' and platform_system != 'Linux') or (platform_machine == 'arm64' and platform_system != 'Darwin')" },
+    { name = "nvidia-nvjitlink-cu12", marker = "(platform_machine != 'aarch64' and platform_system != 'Darwin') or (platform_system != 'Darwin' and platform_system != 'Linux')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/65/5b/cfaeebf25cd9fdec14338ccb16f6b2c4c7fa9163aefcf057d86b9cc248bb/nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl", hash = "sha256:f3b50f42cf363f86ab21f720998517a659a48131e8d538dc02f8768237bd884c", size = 195958278 },
@@ -2005,7 +2003,7 @@ name = "triton"
 version = "3.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "filelock", marker = "(python_full_version < '3.13' and platform_machine != 'aarch64' and platform_machine != 'arm64') or (python_full_version < '3.13' and platform_machine == 'aarch64' and platform_system != 'Linux') or (python_full_version < '3.13' and platform_machine == 'arm64' and platform_system != 'Darwin')" },
+    { name = "filelock", marker = "(python_full_version < '3.13' and platform_machine != 'aarch64' and platform_system != 'Darwin') or (python_full_version < '3.13' and platform_system != 'Darwin' and platform_system != 'Linux')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fe/7b/7757205dee3628f75e7991021d15cd1bd0c9b044ca9affe99b50879fc0e1/triton-3.0.0-1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:34e509deb77f1c067d8640725ef00c5cbfcb2052a1a3cb6a6d343841f92624eb", size = 209464695 },
